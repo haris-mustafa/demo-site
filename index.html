@@ -260,7 +260,7 @@ function search(){
     var r=DB.filter(function(x){return isPhone?x.phone===d:x.cnic.replace(/-/g,"")===d})[0];
     busy=false;btn.disabled=false;btn.textContent="Search";
     if(!r){box("<b>Record not found.</b> No record matches “"+esc(raw)+"”. Please check the number and try again.");return}
-    out.innerHTML='<div class="card"><div class="card-h"><div class="avatar">'+esc(r.name[0])+'</div><div><h3>'+esc(r.name)+'</h3><small>Record found · Verified (demo)</small></div></div>'+
+    out.innerHTML='<div class="card"><div class="card-h"><div class="avatar">'+esc(r.name[0])+'</div><div><h3>'+esc(r.name)+'</h3><small>Record found · Verified Data</small></div></div>'+
     '<div class="grid">'+
     '<div class="cell"><b>Date of birth</b><span>'+esc(r.dob)+'</span></div>'+
     '<div class="cell"><b>CNIC no.</b><span>'+esc(r.cnic)+'</span></div>'+
